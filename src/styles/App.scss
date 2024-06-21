@@ -5,8 +5,7 @@
 body{
    background-image:url(../images/fondo2.jpeg);
    background-image: no-repeat;
-  
-   
+   position:static;
 
 }
 .form{
@@ -36,6 +35,7 @@ input{
 display: flex;
 flex-direction: row;
 justify-content: center;
+align-items: center;
 flex-wrap: wrap;
 margin:15px;
 margin-top: 30px;
@@ -45,10 +45,22 @@ border-color:greenyellow;
 }
 img{
     width: 200px;
-    margin:10px;
+    margin: 10px;
     border-radius: 100px;
     margin-bottom: 20px;
+    border: 5px solid transparent; /* Borde inicial transparente */
+    background: linear-gradient(white, white), radial-gradient(circle at top left, #0fce0c, #3de024);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
   
+
+img:hover {
+    transform: scale(1.1);
+    border-color: #25f258;
+    filter: brightness(1.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
     
@@ -72,9 +84,9 @@ a{
     text-decoration: none;
 }
 p{
-    text-align: center;
-    color:white;
-    background-color: rgb(36, 200, 200);
+    text-align:center;
+    color:black;
+    background-color: rgb(41, 185, 89);
     font-size: 18px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 12px;
@@ -84,13 +96,21 @@ p{
 .photo{
     display: block;
     align-content: center;
-    background-color: aqua; 
-    max-width: 500px;
+    justify-content: center;
+    background: linear-gradient(to right, #5fff6f, #06be19);
+    width: 260px;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
     padding: 20px;
-  
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.photo:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
 }
 .divselect{
     display:flex;
@@ -109,6 +129,64 @@ p{
     font-size: 18px;
     color:rgb(41, 37, 37)
 
+}
+
+
+
+@media (max-width: 480px) {
+    input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    img {
+        width: 100px;
+        border-radius: 50px;
+    }
+    
+    .photo {
+        max-width: 100%;
+        padding: 5px;
+        font-size: 16px;
+    }
+    
+    p {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .select {
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    header {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    input {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .morty {
+        width: 100%;
+    }
+    
+    .photo {
+        max-width: 100%;
+        padding: 10px;
+        font-size: 18px;
+    }
+    
+    header {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 20px;
+    }
 }
 
     
