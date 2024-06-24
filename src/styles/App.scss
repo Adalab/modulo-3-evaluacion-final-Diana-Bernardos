@@ -2,34 +2,39 @@
     padding: 0;
     margin: 0;
 }
-body{
-   background-image:url(../images/fondo2.jpeg);
-   background-image: no-repeat;
-   position:static;
 
-}
+  
+  body {
+    background-image: url(../images/rick-and-morty-wallpaper-portal-wallpaper-016.jpg);
+    background-size: cover; /* Asegura que la imagen cubra todo el body */
+    background-position: center;
+    background-repeat: no-repeat;
+
+   
+    
+  }
+  
+
+
 .form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding:10px;
+    margin-top:30px;
  
 
 }
 input{
     padding: 20px;
-    width: 350px;
+    width: 200px;
     border-radius: 15px;
     margin-top: 10px;
     border-style:groove;
     background-color: black;
     color: aliceblue;
     border-color: blue;
-    
-   
-
-
 }
 .div{
 display: flex;
@@ -39,10 +44,10 @@ align-items: center;
 flex-wrap: wrap;
 margin:15px;
 margin-top: 30px;
-border-color:greenyellow;
-
+border-color:black;
 
 }
+
 img{
     width: 200px;
     margin: 10px;
@@ -58,7 +63,7 @@ img{
 
 img:hover {
     transform: scale(1.1);
-    border-color: #25f258;
+    border-color: black;
     filter: brightness(1.2);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 10px 20px rgba(0, 0, 0, 0.5);
 }
@@ -90,12 +95,13 @@ p{
     font-size: 18px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 12px;
+    word-wrap: break-word;
   
     
 }
 .photo{
-    display: block;
-    align-content: center;
+    display:block;
+    align-items: center;
     justify-content: center;
     background: linear-gradient(to right, #5fff6f, #06be19);
     width: 260px;
@@ -114,7 +120,9 @@ p{
 }
 .divselect{
     display:flex;
-    justify-content: center;
+    justify-content:center;
+     margin-top: auto;
+
    
    
 
@@ -135,7 +143,7 @@ p{
 
 @media (max-width: 480px) {
     input {
-        width: 100%;
+        width: 200px;
         padding: 10px;
         font-size: 16px;
     }
@@ -157,7 +165,7 @@ p{
     }
     
     .select {
-        width: 100%;
+        width: 200px;
         font-size: 16px;
     }
     
@@ -168,7 +176,7 @@ p{
 
 @media (max-width: 768px) {
     input {
-        width: 100%;
+        width: 200px;
         padding: 15px;
     }
     

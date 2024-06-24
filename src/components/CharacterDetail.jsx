@@ -9,16 +9,16 @@ function CharacterDetail({personDetail}) {
   return (
     personDetail ?(
       
-    <div className="photo">
-      <h1>{personDetail.name}</h1>
-      <img src={personDetail.image} alt="detail"/>
-      <div>
-      <p>Species: {personDetail.species}</p>
-      <p>Status: {personDetail.status}</p>
-      <p>Origin: {personDetail.origin}</p>
-      <p>Location: {personDetail.location}</p>
-      <p>Episode:{personDetail.episode}</p>
-      </div>
+   <div className="photo">
+         <h1>{personDetail.name}</h1>
+         <img src={personDetail.image} alt="detail"/>
+     <div className="tarjet">
+       <p>Species: {personDetail.species}</p>
+       <p>Status: {personDetail.status}</p>
+       <p>Origin: {personDetail.origin}</p>
+       <p>Location: {personDetail.location}</p>
+       <p>Episode:{personDetail.episode}</p>
+     </div>
       
      <Link to="/">Volver</Link>
     </div>
